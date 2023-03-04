@@ -54,6 +54,14 @@ insert into orders(date_create,description,image,order_name,price,category_id) v
 
 
 
+-- Sweets-- 
+
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'testy cupcakes','cupcakes','cupcakes',1.99,4);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'testy jalebi','jalebi','jalebi',2.44,4);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'testy kajukatli','kajukatli','kajukatli',4.99,4);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'testy maxresde','maxresde','maxresde',5.99,4);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'testy pakeeza','pakeeza','pakeeza',2.00,4);
+
 
 
 
