@@ -1,0 +1,39 @@
+
+.sidebar{
+  background-color: red;
+  min-height: 100vh;
+}
+
+.sidebar .content{
+  padding-top: 100px;
+}
+
+.sidebar .content ul{
+  list-style: none;
+  font-size: 2rem;
+  padding-left: 30px;
+}
+
+.sidebar .content ul li{
+  margin-top: 50px;
+}
+
+.sidebar .content ul li span{
+  margin: 8px;
+}
+
+.main{
+  border: 2px solid black;
+  min-height: 100vh;
+}
+
+.main .main-card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding-top: 100px;
+}
+
+
+

@@ -1,0 +1,75 @@
+insert into category(category_name, date_create) values ('Food',now());
+insert into category(category_name, date_create) values ('Cold Drinks',now());
+insert into category(category_name, date_create) values ('Hot Drinks',now());
+insert into category(category_name, date_create) values ('Sweets',now());
+insert into category(category_name, date_create) values ('Others',now());
+
+
+
+-- Burger-- 
+
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is 5050 burger','5050','5050 burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is angus burger','angus','angus burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is aussie burger','aussie','aussie burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is bacom-cheese burger','bacom-cheese','bacom-cheese burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is barbecue burger','barbecue','barbecue burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is bofsandwich burger','bofsandwich','bofsandwich',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is buffalo burger','buffalo','buffalo burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is butter burger','butter','butter burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is california burger','california','california burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is cheese burger','chesse','cheese burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is chili burger','chili','chili burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is chori burger','chori','chori burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is hawaii burger','hawaii','hawaii burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is jucy lucy burger','jucy-lucy','jucy-lucy burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is kimchi burger','kimchi','kimchi burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is luther burger','luther','luther burger',5.99,1);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'this is steak burger','steak','steak burger',5.99,1);
+
+
+
+-- Cold Drink-- 
+
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold coca-cola','coca-cola','coca-cola',1.99,2);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold coconut-milk','coconut','coconut milk',3.44,2);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold fruit-juice','fruit-juice','fruit juice',6.99,2);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold lemon-juice','lemon','lemon juice',3.99,2);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold milkshake','milkshake','milkshake',5.00,2);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold orange-juice','orange','orange juice',4.99,2);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold smoothie','smoothie','smoothie',5.99,2);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold tomato-juice','tomato','tomato juice',2.99,2);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'cold water','water','water',1.00,2);
+
+
+
+-- Hot Drink-- 
+
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'hot double-chocolate','double-chocolate','double chocolate',1.99,3);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'hot penicillin','penicillin','penicillin',2.44,3);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'hot mocha','mocha','mocha',4.99,3);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'hot mulled-cranberry','cranberry','cranberry',5.99,3);
+insert into orders(date_create,description,image,order_name,price,category_id) values (now(),'hot vin-brule','vin-brule','vin-brule',2.00,3);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

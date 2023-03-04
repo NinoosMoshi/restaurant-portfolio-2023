@@ -1,0 +1,35 @@
+/* start header */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 1rem 9%;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+  z-index: 1;
+}
+
+header .logo{
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #666;
+}
+
+header .logo .img-logo{
+  padding-right: .2rem;
+  color: #ff3838;
+}
+
+
+header ul li a{
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  color: #666;
+}
+
+header ul li a:hover{
+  font-weight: bold;
+  color: #ff3838;
+}
+/* end header */
