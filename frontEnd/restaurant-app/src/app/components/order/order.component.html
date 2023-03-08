@@ -3,56 +3,31 @@
     <div class="row">
 
       <div class="col-lg-2 sidebar">
-        <div class="content">
+        <app-category></app-category>
+        <!-- <div class="content position-fixed">
            <ul>
-            <li><a><i class="fas fa-home p-1"></i><span>Food</span></a></li>
-            <li><a><i class="fas fa-home p-1"></i><span>Cold Drinks</span></a></li>
-            <li><a><i class="fas fa-home p-1"></i><span>Hot Drinks</span></a></li>
-            <li><a><i class="fas fa-home p-1"></i><span>Sweets</span></a></li>
+            <li><a><i class="fa-solid fa-burger"></i><span>Food</span></a></li>
+            <li><a><i class="fa-solid fa-martini-glass-citrus"></i><span>Cold Drinks</span></a></li>
+            <li><a><i class="fa-solid fa-mug-hot"></i><span>Hot Drinks</span></a></li>
+            <li><a><i class="fa-solid fa-cookie-bite"></i><span>Sweets</span></a></li>
            </ul>
-        </div>
+        </div> -->
       </div>
 
       <div class="col-lg-10 main">
-         <div class="main-card">
+         <div class="main-card" >
 
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn">Go somewhere</a>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn">Go somewhere</a>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn">Go somewhere</a>
-            </div>
-          </div>
-
-          <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn">Go somewhere</a>
-            </div>
-          </div>
-
+          <div class="row">
+             <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let temp of orders">
+                <div class="box">
+                  <span class="price">{{temp.price | currency:'USD'}}</span>
+                  <img src="{{temp.image}}">
+                  <h3>{{temp.orderName}}</h3>
+                  <a href="#" class="btn">Add to Cart</a>
+                </div>
+             </div>
          </div>
+
       </div>
 
     </div>

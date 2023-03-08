@@ -1,0 +1,23 @@
+.content{
+  padding-top: 100px;
+}
+
+.content ul{
+  list-style: none;
+  font-size: 2rem;
+  padding-left: 30px;
+}
+
+.content ul li{
+  margin-top: 50px;
+}
+
+
+.content ul li span{
+  margin: 8px;
+}
+
+.content ul li span:hover{
+  cursor: pointer;
+  color: #ff3838;
+}
