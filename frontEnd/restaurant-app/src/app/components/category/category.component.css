@@ -6,18 +6,32 @@
   list-style: none;
   font-size: 2rem;
   padding-left: 30px;
+
 }
 
 .content ul li{
   margin-top: 50px;
 }
 
+.content ul li a{
+  text-decoration: none;
+}
+
 
 .content ul li span{
   margin: 8px;
+  color: #908e8e;
 }
 
 .content ul li span:hover{
   cursor: pointer;
   color: #ff3838;
 }
+
+.content .active{
+  color: #ff3838;
+  font-size: 2.5rem;
+}
+
+
+

@@ -18,4 +18,14 @@ public class OrderService {
         return orderRepository.findAll();
     }
 
+    public List<Order> getOrdersByCategoryId(Long categoryId){
+        return orderRepository.findByCategoryId(categoryId);
+    }
+
+    public List<Order> getOrdersByNameContain(String name){
+        return orderRepository.findOrdersByOrderNameContaining(name);
+    }
+
+
+
 }

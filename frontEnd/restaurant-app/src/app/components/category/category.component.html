@@ -1,7 +1,11 @@
 <div class="content position-fixed">
-  <ul *ngFor="let temp of categories">
-   <li >
-     <a><i class="{{temp.categoryLogo}}"></i><span>{{temp.categoryName}}</span></a>
+
+  <ul >
+    <li>
+      <a routerLinkActive="active" routerLink="/order"><i class="fa-solid fa-utensils"></i><span>All Orders</span></a>
+    </li>
+   <li *ngFor="let temp of categories">
+     <a routerLinkActive="active" routerLink="/category/{{temp.id}}"><i class="{{temp.categoryLogo}}"></i><span>{{temp.categoryName}}</span></a>
    </li>
 
    <!-- <li><a><i class="fa-solid fa-burger"></i><span>Food</span></a></li>

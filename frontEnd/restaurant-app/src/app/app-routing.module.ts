@@ -1,11 +1,16 @@
+import { CategoryComponent } from './components/category/category.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { OrderComponent } from './components/order/order.component';
 
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
+  {path:'category/:id', component:OrderComponent},
+  {path:'category', component:OrderComponent},
   {path:'order', component:OrderComponent},
+  {path:'order/:key', component:OrderComponent},
+  {path:'home', component:HomeComponent},
+  {path:'**',redirectTo:'/home',pathMatch:'full'},
   {path:'',redirectTo:'/home',pathMatch:'full'}
 ];
 

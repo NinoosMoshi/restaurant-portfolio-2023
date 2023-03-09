@@ -1,0 +1,20 @@
+li a{
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: #666;
+}
+
+li a:hover{
+  font-weight: bold;
+  color: #ff3838;
+}
+
+li span{
+  padding-left: 7px;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #ff3838;
+  text-decoration: none;
+  background: none;
+}

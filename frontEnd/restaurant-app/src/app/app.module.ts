@@ -7,7 +7,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { OrderComponent } from './components/order/order.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { CategoryComponent } from './components/category/category.component'
+import { CategoryComponent } from './components/category/category.component';
+import { DropDownMenuComponent } from './components/drop-down-menu/drop-down-menu.component';
+import { SearchComponent } from './components/search/search.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CategoryComponent } from './components/category/category.component'
     NavbarComponent,
     OrderComponent,
     HomeComponent,
-    CategoryComponent
+    CategoryComponent,
+    DropDownMenuComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
