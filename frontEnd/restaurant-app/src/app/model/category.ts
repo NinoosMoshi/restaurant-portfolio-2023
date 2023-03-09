@@ -1,7 +1,7 @@
 export class Category {
   id?:number;
   categoryName?:string;
-  // categoryLogo?:string ;
+  categoryLogo?:string ;
   dateCreated?:Date;
   dateUpdated?:Date;
 }

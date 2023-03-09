@@ -1,8 +1,12 @@
 <div class="content position-fixed">
-  <ul>
-   <li><a><i class="fa-solid fa-burger"></i><span>Food</span></a></li>
+  <ul *ngFor="let temp of categories">
+   <li >
+     <a><i class="{{temp.categoryLogo}}"></i><span>{{temp.categoryName}}</span></a>
+   </li>
+
+   <!-- <li><a><i class="fa-solid fa-burger"></i><span>Food</span></a></li>
    <li><a><i class="fa-solid fa-martini-glass-citrus"></i><span>Cold Drinks</span></a></li>
    <li><a><i class="fa-solid fa-mug-hot"></i><span>Hot Drinks</span></a></li>
-   <li><a><i class="fa-solid fa-cookie-bite"></i><span>Sweets</span></a></li>
+   <li><a><i class="fa-solid fa-cookie-bite"></i><span>Sweets</span></a></li> -->
   </ul>
 </div>

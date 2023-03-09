@@ -16,7 +16,7 @@ public class CategoryController {
 
     private final CategoryService categoryService;
 
-    // http://localhost:8080/api/v1/categories/all
+    // http://localhost:8080/api/v1/categories/all-categories
     @GetMapping("/all-categories")
     public List<Category> getAllCategories(){
         return categoryService.allCategories();
