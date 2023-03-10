@@ -29,9 +29,17 @@ export class OrderService {
     );
   }
 
-  // // http://localhost:8080/api/v1/orders/search?name={value}
+  // http://localhost:8080/api/v1/orders/search?name={value}
   getOrdersByOrderName(name: string):Observable<Order[]>{
     return this.http.get<Order[]>(`${this.baseUrl}/search?name=${name}`).pipe(
+      map(response => response)
+    );
+  }
+
+
+  // http://localhost:8080/api/v1/orders/order?orderId={value}
+  getOrdersById(id: number):Observable<Order>{
+    return this.http.get<Order>(`${this.baseUrl}/order?orderId=${id}`).pipe(
       map(response => response)
     );
   }

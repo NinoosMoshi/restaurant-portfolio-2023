@@ -9,7 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryComponent } from './components/category/category.component';
 import { DropDownMenuComponent } from './components/drop-down-menu/drop-down-menu.component';
-import { SearchComponent } from './components/search/search.component'
+import { SearchComponent } from './components/search/search.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchComponent } from './components/search/search.component'
     HomeComponent,
     CategoryComponent,
     DropDownMenuComponent,
-    SearchComponent
+    SearchComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,

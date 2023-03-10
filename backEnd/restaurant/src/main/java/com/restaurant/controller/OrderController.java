@@ -37,5 +37,15 @@ public class OrderController {
         return orderService.getOrdersByNameContain(name);
     }
 
+    // http://localhost:8080/api/v1/orders/order?orderId={value}
+    @GetMapping("/order")
+    public Order getOrderById(@RequestParam Long orderId){
+        return orderService.getOrderById(orderId);
+    }
+
+
+
+
+
 
 }

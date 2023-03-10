@@ -1,0 +1,77 @@
+section{
+  display: flex;
+  justify-content: center;
+  margin: 10rem auto;
+  width: 50%;
+}
+
+section .card img{
+  font-size: 3rem;
+}
+
+section .card .price{
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: #ff3838;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+}
+
+section .card .card-title{
+  font-size: 3rem;
+}
+
+section .card .card-text{
+  font-size: 2rem;
+}
+
+@media(max-width:1200px){
+  section{
+    width: 60%;
+  }
+  section .card .card-title{
+    font-size: 2rem;
+  }
+
+  section .card .card-text{
+    font-size: 1.5rem;
+  }
+}
+
+
+@media(max-width:1000px){
+  section{
+    width: 80%;
+  }
+}
+
+@media(max-width:400px){
+  section{
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+/* .card{
+  background-color: #343a40;
+  border: 1px solid black;
+  margin-top: 150px;
+
+ }
+
+ .card button{
+  background-color: #FF6A00;
+  border:1px solid #FF6A00;
+  color: #fff;
+ }
+
+.backword{
+  float: left;
+  cursor: pointer;
+} */
