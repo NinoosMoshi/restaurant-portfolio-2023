@@ -2,7 +2,7 @@
 
   <ul >
     <li>
-      <a routerLinkActive="active" routerLink="/order"><i class="fa-solid fa-utensils"></i><span>All Orders</span></a>
+      <a routerLinkActive="active" routerLink="/orders"><i class="fa-solid fa-utensils"></i><span>All Orders</span></a>
     </li>
    <li *ngFor="let temp of categories">
      <a routerLinkActive="active" routerLink="/category/{{temp.id}}"><i class="{{temp.categoryLogo}}"></i><span>{{temp.categoryName}}</span></a>

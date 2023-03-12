@@ -26,6 +26,31 @@
                   <a href="#" class="btn">Add to Cart</a>
                 </div>
              </div>
+
+              <!-- Start Pagination -->
+              <div class="pag">
+
+                <ngb-pagination
+                   [(page)]="page"
+                   [pageSize]="pageLength"
+                   [collectionSize]="totalOrder"
+                   [maxSize]="2"
+                   [boundaryLinks]="true"
+                   (pageChange)="doing()"
+                >
+                </ngb-pagination>
+
+                <div class="sel">
+                  <select (change)="pageSize($event)">
+                    <option>3</option>
+                    <option selected="true">6</option>
+                    <option>9</option>
+                  </select>
+                </div>
+
+              </div>
+              <!-- End Pagination -->
+
          </div>
 
       </div>

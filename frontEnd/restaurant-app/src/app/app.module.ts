@@ -11,6 +11,8 @@ import { CategoryComponent } from './components/category/category.component';
 import { DropDownMenuComponent } from './components/drop-down-menu/drop-down-menu.component';
 import { SearchComponent } from './components/search/search.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component'
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbPaginationModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

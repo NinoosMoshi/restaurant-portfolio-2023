@@ -10,6 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OrderComponent implements OnInit {
 
+  page: number = 1;
+  pageLength: number = 6;  // pageSize
+  totalOrder:number = 0;  // collectionSize, the total number of orders
+
   orders:Order[] = [];
 
   constructor(private orderService:OrderService, private route:ActivatedRoute) { }
@@ -35,7 +39,10 @@ export class OrderComponent implements OnInit {
   }
 
   getOrders(){
-    this.orderService.getAllOrders().subscribe(data =>{
+    this.orderService.getOrdersLength().subscribe(data =>{
+      this.totalOrder = data
+    })
+    this.orderService.getAllOrders(this.page - 1,this.pageLength).subscribe(data =>{
       this.orders = data
     })
   }
@@ -43,7 +50,11 @@ export class OrderComponent implements OnInit {
 
   getOrderByCategoryId(){
     let categoryId = +this.route.snapshot.paramMap.get('id');
-    this.orderService.getOrdersByCategoryId(categoryId).subscribe(data =>{
+    this.orderService.getOrdersLengthByCategoryId(categoryId).subscribe(data =>{
+      this.totalOrder = data
+    })
+
+    this.orderService.getOrdersByCategoryId(categoryId,this.page -1 ,this.pageLength).subscribe(data =>{
       this.orders = data
     })
   }
@@ -51,10 +62,22 @@ export class OrderComponent implements OnInit {
 
   getOrderByNameContain(){
     let orderName = this.route.snapshot.paramMap.get('key');
-    this.orderService.getOrdersByOrderName(orderName).subscribe(data =>{
+    this.orderService.getOrdersLengthByKeywordSearch(orderName).subscribe(data =>{
+      this.totalOrder = data
+    })
+    this.orderService.getOrdersByOrderName(orderName,this.page -1 ,this.pageLength).subscribe(data =>{
       this.orders = data
     })
   }
 
+
+  doing(){
+    this.finishOrder();
+  }
+
+  pageSize(event: Event){
+    this.pageLength = +(<HTMLInputElement>event.target).value
+    this.finishOrder();
+ }
 
 }
