@@ -1,6 +1,9 @@
+li{
+  margin-left: 2rem;
+}
+
 li a{
   font-size: 2rem;
-  margin-left: 2rem;
   color: #666;
 }
 

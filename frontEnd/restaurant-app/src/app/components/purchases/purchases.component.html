@@ -1,81 +1,25 @@
 <div class="container wrapper">
   <div class="row">
 
-    <div class="col-md-6 col-lg-4 col-sm-12">
+    <div class="col-md-6 col-lg-4 col-sm-12" *ngFor="let temp of orders">
       <div class="card">
-        <div class="totprice">$5</div>
-        <img src="../../../assets/img/cold-drink/Lemonade.jpg" class="card-img-top" alt="...">
+        <div class="top-total">{{temp.price * temp.quantity | currency:'USD'}}</div>
+        <div class="top-price">{{temp.price | currency:'USD'}}</div>
+        <img src="{{temp.image}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h2 class="card-title">5050 burger</h2>
+          <h2 class="card-title">{{temp.orderName}}</h2>
 
           <div class="sub-title">
             <span class="minus"><i class="fas fa-minus"></i></span>
-            <span class="num">4</span>
+            <span class="num">{{temp.quantity}}</span>
             <span class="plus"><i  class="fas fa-plus"></i></span>
           </div>
 
-          <button class="btn">Add Order</button>
-
         </div>
-      </div>
+        <button class="btn">remove</button>
+      </div>   <!--end card-->
+
     </div>
-    <div class="col-md-6 col-lg-4 col-sm-12">
-      <div class="card">
-        <div class="totprice">$5</div>
-        <img src="../../../assets/img/cold-drink/Lemonade.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h2 class="card-title">5050 burger</h2>
-
-          <div class="sub-title">
-            <span class="minus"><i class="fas fa-minus"></i></span>
-            <span class="num">4</span>
-            <span class="plus"><i  class="fas fa-plus"></i></span>
-          </div>
-
-          <button class="btn">Add Order</button>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4 col-sm-12">
-      <div class="card">
-        <div class="totprice">$5</div>
-        <img src="../../../assets/img/cold-drink/Lemonade.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h2 class="card-title">5050 burger</h2>
-
-          <div class="sub-title">
-            <span class="minus"><i class="fas fa-minus"></i></span>
-            <span class="num">4</span>
-            <span class="plus"><i  class="fas fa-plus"></i></span>
-          </div>
-
-          <button class="btn">Add Order</button>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-4 col-sm-12">
-      <div class="card">
-        <div class="totprice">$5</div>
-        <img src="../../../assets/img/cold-drink/Lemonade.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h2 class="card-title">5050 burger</h2>
-
-          <div class="sub-title">
-            <span class="minus"><i class="fas fa-minus"></i></span>
-            <span class="num">4</span>
-            <span class="plus"><i  class="fas fa-plus"></i></span>
-          </div>
-
-          <button class="btn">Add Order</button>
-
-        </div>
-      </div>
-    </div>
-
-
-
 
   </div>
 </div>
