@@ -40,6 +40,16 @@ section .card .card-text{
   }
 }
 
+.card .card-body div,i{
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.card .card-body span{
+  font-size: 1.7rem;
+  color: #b1aeae;
+}
+
 
 @media(max-width:1000px){
   section{
@@ -58,20 +68,3 @@ section .card .card-text{
 
 
 
-/* .card{
-  background-color: #343a40;
-  border: 1px solid black;
-  margin-top: 150px;
-
- }
-
- .card button{
-  background-color: #FF6A00;
-  border:1px solid #FF6A00;
-  color: #fff;
- }
-
-.backword{
-  float: left;
-  cursor: pointer;
-} */

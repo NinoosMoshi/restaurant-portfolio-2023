@@ -1,0 +1,150 @@
+.wrapper{
+  margin-top: 100px;
+}
+
+.wrapper .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 15px auto;
+
+}
+
+.wrapper .card .sub-title{
+  height: 100%;
+  min-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  border-radius: 12px;
+  color: white;
+}
+
+.wrapper .card .sub-title span{
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.wrapper .card .sub-title span.num{
+  font-size: 20px;
+  border-right: 2px solid rgba(0,0,0,0.2);
+  border-left: 2px solid rgba(0,0,0,0.2);
+}
+
+
+.wrapper .card .totprice{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ff3838;
+  padding: 1% 8%;
+  color: #fff;
+  font-size: 2rem;
+
+}
+
+
+@media(min-width:400px){
+
+}
+
+
+
+
+/* .card{
+width: 50%;
+margin-top: 100px;
+} */
+
+
+/* .totprice
+{
+  position: absolute;
+  padding: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #FF6A00;
+  font-size: 20px;
+} */
+
+
+
+
+/* .fa-plus{
+  background-color: #FF6A00;
+  color: #fff;
+  padding: 8px;
+  border: 1px solid #e68908;
+  cursor: pointer;
+} */
+
+/* .fa-minus{
+  background-color: #FF6A00;
+  color: #fff;
+  padding: 8px;
+  border: 1px solid #e68908;
+  cursor: pointer;
+} */
+
+
+/* span{
+  padding: 0px 40px;
+  font-size: 26px;
+  font-weight: bold;
+} */
+
+
+
+
+/* .card button{
+  margin: 10px;
+  background-color: #FF6A00;
+  color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #e68908;
+} */
+
+
+/* Start Check Out */
+/* .check-out
+{
+  border-radius: 30px;
+  background-color: white;
+  padding: 20px;
+  width: 355px;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 93px 170px;
+  position: absolute;
+  z-index: 0;
+} */
+
+/* .check-out button{
+  padding: 6px 60px 7px 60px;
+} */
+
+/* .size
+{
+  background-color: #FF6A00;
+  padding: 8px;
+  color: aliceblue;
+  margin-bottom: 5px;
+} */
+/* .totalprice
+{
+  margin-bottom: 20px;
+  background-color: #FF6A00;
+  padding: 8px;
+  color: aliceblue;
+} */
+
+/* .done
+{
+  width: 318px;
+  font-weight: bold;
+} */
+/* End Check Out */

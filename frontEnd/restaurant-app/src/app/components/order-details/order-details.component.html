@@ -5,9 +5,10 @@
     <div class="card-body">
       <h5 class="card-title">{{order.orderName}}</h5>
       <p class="card-text">{{order.description}}</p>
-      <a href="#" class="btn">Add To Cart</a>
+      <a (click)="addToCart(order)" class="btn">Add To Cart</a>
       <div routerLink="/orders">
         <i class="fa-solid fa-arrow-left fa-2x"></i>
+        <span>go back</span>
       </div>
     </div>
   </div>

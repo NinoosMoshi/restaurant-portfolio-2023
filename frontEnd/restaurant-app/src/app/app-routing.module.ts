@@ -1,3 +1,4 @@
+import { PurchasesComponent } from './components/purchases/purchases.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
 import { CategoryComponent } from './components/category/category.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:'category', component:OrderComponent},
   {path:'orders/:key', component:OrderComponent},
   {path:'orders', component:OrderComponent},
+  {path:'purchase', component:PurchasesComponent},
   {path:'home', component:HomeComponent},
   {path:'**',redirectTo:'/home',pathMatch:'full'},
   {path:'',redirectTo:'/home',pathMatch:'full'}

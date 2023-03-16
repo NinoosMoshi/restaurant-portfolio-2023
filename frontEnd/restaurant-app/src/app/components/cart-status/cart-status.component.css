@@ -1,0 +1,42 @@
+.cart-area{
+  overflow:hidden;
+  padding: .3rem;
+  text-align: center;
+  font-weight: 500;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #666;
+  border-radius: 15px;
+  margin-left: 10px;
+  }
+
+  .cart-area a{
+  color: #666;
+  text-decoration: none;
+  }
+
+  .cart-area a:hover{
+    color: red;
+  }
+
+  .cart-area span.price{
+  padding: 6px;
+  margin: 0px 0px 0px -4px;
+  font-size: 2rem;
+  }
+
+  .cart-area span.quantity{
+    padding: 6px;
+    margin: 0px 0px 0px -4px;
+    font-size: 2rem;
+    font-weight: bold;
+    }
+
+
+
+  .cart-area i{
+  padding-left: 5px;
+  }
+
+

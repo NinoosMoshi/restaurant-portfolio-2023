@@ -13,6 +13,8 @@ import { SearchComponent } from './components/search/search.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component'
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CartStatusComponent } from './components/cart-status/cart-status.component';
+import { PurchasesComponent } from './components/purchases/purchases.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CategoryComponent,
     DropDownMenuComponent,
     SearchComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    CartStatusComponent,
+    PurchasesComponent
   ],
   imports: [
     BrowserModule,

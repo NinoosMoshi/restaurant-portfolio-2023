@@ -23,7 +23,7 @@
                   <span class="price">{{temp.price | currency:'USD'}}</span>
                   <a routerLink="/order/{{temp.id}}"><img src="{{temp.image}}"></a>
                   <h3>{{temp.orderName}}</h3>
-                  <a href="#" class="btn">Add to Cart</a>
+                  <a (click)="addToCart(temp)" class="btn">Add to Cart</a>
                 </div>
              </div>
 

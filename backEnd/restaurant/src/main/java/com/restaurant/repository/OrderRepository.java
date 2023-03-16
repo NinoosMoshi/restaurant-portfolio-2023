@@ -14,6 +14,8 @@ public interface OrderRepository extends JpaRepository<Order,Long> {
 
     Page<Order> findByCategoryId(Long categoryId, Pageable pageable);
 
+
+
     Page<Order> findOrdersByOrderNameContaining(String name, Pageable pageable);
 
     @Query("select count (id) from Order where category.id=?1")
@@ -22,6 +24,7 @@ public interface OrderRepository extends JpaRepository<Order,Long> {
 
     @Query("select count (id) from Order where orderName like %?1%")
     Long getOrderLengthByKeySearch(String key);
+
 
 
 
