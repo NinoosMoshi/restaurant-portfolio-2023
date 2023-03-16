@@ -66,3 +66,11 @@ section{
 .btn:hover{
   color: #fff;
 }
+
+
+.alert{
+  font-size: 2rem;
+  text-align: center;
+  padding: 3rem;
+  margin-bottom: 9rem;
+}

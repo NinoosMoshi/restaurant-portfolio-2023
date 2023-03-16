@@ -1,6 +1,10 @@
 <div class="container wrapper">
   <div class="row">
 
+    <div *ngIf="orders?.length == 0" class="alert alert-danger" role="alert">
+      No Order Founds
+    </div>
+
     <div class="col-md-6 col-lg-4 col-sm-12" *ngFor="let temp of orders">
       <div class="card">
         <div class="top-total">{{temp.price * temp.quantity | currency:'USD'}}</div>
