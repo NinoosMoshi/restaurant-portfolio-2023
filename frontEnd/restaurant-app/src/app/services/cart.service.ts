@@ -51,8 +51,29 @@ export class CartService {
 
     this.totalOrders.next(totalElementsSizeOrder);
     this.totalPrice.next(totalPriceOrder);
-    console.log("size of orders: " + this.totalOrders);
-    console.log("price of orders: " + this.totalPrice);
-
   }
+
+
+  removeOrder(order:CartOrder){
+    order.quantity--;
+    if(order.quantity === 0){
+      this.remove(order);
+    }else{
+      this.calculateTotals();
+    }
+  }
+
+  remove(order:CartOrder){
+    const index = this.orders.findIndex(temp => temp.id === order.id);
+    console.log(index)
+    if(index > -1){
+      this.orders.splice(index,1);  // ex: orders[5,6,7,8]  index=2 index2=7 then remove 7
+      this.calculateTotals();
+    }
+  }
+
+
+
+
+
 }

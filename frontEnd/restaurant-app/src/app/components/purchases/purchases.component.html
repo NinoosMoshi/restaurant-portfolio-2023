@@ -14,13 +14,13 @@
           <h2 class="card-title">{{temp.orderName}}</h2>
 
           <div class="sub-title">
-            <span class="minus"><i class="fas fa-minus"></i></span>
+            <span (click)="increaseOrderQuantity(temp)"  class="plus"><i class="fas fa-plus"></i></span>
             <span class="num">{{temp.quantity}}</span>
-            <span class="plus"><i  class="fas fa-plus"></i></span>
+            <span (click)="decreasOrderQuantity(temp)" class="minus"><i class="fas fa-minus"></i></span>
           </div>
 
         </div>
-        <button class="btn">remove</button>
+        <button (click)="removeOrder(temp)" class="btn">remove</button>
       </div>   <!--end card-->
 
     </div>
