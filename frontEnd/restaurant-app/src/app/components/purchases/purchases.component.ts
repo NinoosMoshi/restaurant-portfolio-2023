@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CartService } from './../../services/cart.service';
 import { CartOrder } from './../../model/cart-order';
 import { Component, OnInit } from '@angular/core';
@@ -11,10 +12,14 @@ export class PurchasesComponent implements OnInit {
 
   orders:CartOrder[] = [];
 
-  constructor(private cartService: CartService) { }
+  totalOrder:number = 0;
+  totalPrice:number = 0;
+
+  constructor(private cartService: CartService, private router:Router) { }
 
   ngOnInit(): void {
     this.getAllOrders();
+    this.getTotals();
   }
 
   getAllOrders(){
@@ -32,6 +37,20 @@ export class PurchasesComponent implements OnInit {
 
   removeOrder(temp:CartOrder){
     this.cartService.remove(temp);
+  }
+
+  getTotals(){
+    this.cartService.totalOrders.subscribe(data =>{
+      this.totalOrder = data
+    });
+    this.cartService.totalPrice.subscribe(data =>{
+      this.totalPrice = data
+    });
+  }
+
+
+  checkOut(){
+    this.router.navigateByUrl("/check-out")
   }
 
 

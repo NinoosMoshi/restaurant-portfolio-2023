@@ -15,6 +15,7 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
 import { PurchasesComponent } from './components/purchases/purchases.component';
+import { CheckOutComponent } from './components/check-out/check-out.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PurchasesComponent } from './components/purchases/purchases.component';
     SearchComponent,
     OrderDetailsComponent,
     CartStatusComponent,
-    PurchasesComponent
+    PurchasesComponent,
+    CheckOutComponent
   ],
   imports: [
     BrowserModule,

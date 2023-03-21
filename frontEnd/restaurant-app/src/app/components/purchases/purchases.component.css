@@ -67,3 +67,64 @@
 
 
 
+/* Start Check Out */
+.check-out{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 30px;
+  background-color: white;
+  padding: 20px;
+  width: 30%;
+  margin: 0 auto;
+}
+/* End Check Out */
+
+
+
+/* media queries */
+
+/* Desktop & Laptop----- from 1024px */
+@media(min-width: 1024px){
+  .check-out{
+    font-size: 2rem;
+  }
+}
+
+/* Tablets & iPads-------- between 768px to 1023px */
+@media(min-width: 769px) and (max-width: 1023px){
+  .check-out{
+    font-size: 1.9rem;
+  }
+}
+
+
+/* Mobile & Smart Phones ----- 0 to 768px */
+@media(max-width: 768px){
+  .check-out{
+    font-size: 1.5rem;
+    width: 40%;
+  }
+}
+
+
+/* Small Phones ----- 0 to 468px */
+@media(max-width: 468px){
+
+  .wrapper .card .sub-title{
+    height: 100%;
+    min-width: 50%;
+  }
+
+  .check-out{
+    font-size: 1.1rem;
+    width: 40%;
+  }
+  .check-out button{
+    font-size: 1rem;
+  }
+}
+

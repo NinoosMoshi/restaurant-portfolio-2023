@@ -24,8 +24,20 @@
       </div>   <!--end card-->
 
     </div>
-
   </div>
+
+     <!-- Start Check Out -->
+
+  <div class="check-out">
+    <div class="size">Total Order: {{totalOrder}}</div>
+    <div class="totalprice">Total Price: {{totalPrice | currency: 'USD'}}</div>
+    <button (click)="checkOut()" *ngIf="this.orders.length !== 0"  type="button" class="btn done">Check Out</button>
+  </div>
+
+  <!-- End Check Out -->
+
+
+
 </div>
 
 
