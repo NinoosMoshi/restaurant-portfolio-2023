@@ -19,6 +19,20 @@
    color: #fff;
 }
 
+.wrapper .input-group input{
+  padding: 10px;
+  font-size: 1.6rem;
+}
+
+.wrapper .input-group span{
+  font-size: 1.5rem;
+}
+
+
+.wrapper .input-group select{
+  font-size: 1.6rem;
+}
+
 
 .wrapper .bill-address .billlabel{
   display: flex;
