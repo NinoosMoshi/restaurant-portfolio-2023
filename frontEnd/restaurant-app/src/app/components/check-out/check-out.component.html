@@ -3,25 +3,70 @@
 
       <div formGroupName="data" class="data mb-5">
         <label class="datalabel">Customer</label>
+
         <div class="input-group mb-3">
-          <span class="input-group-text" >@</span>
+          <span class="input-group-text" >Name</span>
           <input formControlName="fullName" type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon1">
         </div>
+        <!-- start name validation -->
+        <div *ngIf="fullName?.invalid && (fullName?.dirty || fullName?.touched)">
+          <div *ngIf="fullName?.errors?.['required'] || fullName?.errors?.['noSpace'] " class="alert alert-danger"  class="alert alert-danger" role="alert">
+            Full Name Is Required
+          </div>
+          <div *ngIf="fullName?.errors?.['minlength']" class="alert alert-danger" role="alert">
+            Full Name must be not less than 12 digit
+          </div>
+        </div>
+        <!-- end name validation -->
+
 
         <div  class="input-group mb-3">
           <span class="input-group-text" >Email</span>
-          <input formControlName="email" type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <input formControlName="email" type="text" class="form-control" placeholder="email address" aria-label="Recipient's username" aria-describedby="basic-addon2">
         </div>
+        <!-- start email validation -->
+        <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" >
+          <div  *ngIf="email?.errors?.['required']" class="alert alert-danger" role="alert">
+            Email is Required
+          </div>
+          <div  *ngIf="email?.errors?.['pattern']" class="alert alert-danger" role="alert">
+            Invalid Email
+          </div>
+        </div>
+        <!-- end email validation -->
+
+
 
         <div class="input-group mb-3">
           <span class="input-group-text">Phone Number</span>
           <input formControlName="phoneNumber" type="text" class="form-control"  aria-describedby="basic-addon3">
         </div>
+        <!-- start phone validation -->
+        <div *ngIf="phoneNumber?.invalid && (phoneNumber?.dirty || phoneNumber?.touched)" >
+          <div *ngIf="phoneNumber?.errors?.['required']" class="alert alert-danger" role="alert">
+            Phone is Required
+          </div>
+          <div *ngIf="phoneNumber?.errors?.['maxlength']" class="alert alert-danger" role="alert">
+            phoneNumber must be not more than 11 digit
+          </div>
+          <div *ngIf="phoneNumber?.errors?.['minlength']"  class="alert alert-danger" role="alert">
+            phoneNumber must be not less than 11 digit
+          </div>
+          <div *ngIf="phoneNumber?.errors?.['pattern']" class="alert alert-danger" role="alert">
+            Invalid phoneNumber
+          </div>
+        </div>
+        <!-- end phone validation -->
+
+
+
       </div>
+
 <!-- ........................................................................................................ -->
 
 <div formGroupName="fromPerson" class="bill-address mb-5">
         <label class="billlabel">Billing Address: </label>
+
         <div class="input-group mb-3">
           <span class="input-group-text myin" for="inputGroupSelect02">State</span>
           <select (change)="getCitiesByCode('fromPerson')" formControlName="state" class="form-select">
@@ -45,7 +90,7 @@
           <span class="input-group-text">Zip Code</span>
           <input formControlName="zipCode" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
         </div>
-      </div>
+ </div>
 <!-- ........................................................................................................ -->
       <div class="mb-5">
         <div class="form-check form-switch">

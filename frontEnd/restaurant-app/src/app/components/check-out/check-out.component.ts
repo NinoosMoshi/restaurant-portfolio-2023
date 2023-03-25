@@ -2,8 +2,9 @@ import { City } from './../../model/city';
 import { State } from './../../model/state';
 import { StateCityService } from './../../services/state-city.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CartService } from 'src/app/services/cart.service';
+import { SpaceValidator } from 'src/app/model/space-validator';
 
 @Component({
   selector: 'app-check-out',
@@ -35,9 +36,18 @@ export class CheckOutComponent implements OnInit {
   myForm(){
     this.parentFormGroup = this.childFormGroup.group({
       data:this.childFormGroup.group({
-        fullName:[''],
-        email:[''],
-        phoneNumber:['']
+        fullName:new FormControl('',[Validators.required,
+                                     SpaceValidator.onlyContainSpace,
+                                     Validators.minLength(12)
+                                    ]),
+        email:new FormControl('',[Validators.required,
+                                  Validators.pattern('^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$')
+                                 ]),
+        phoneNumber:new FormControl('',[Validators.required,
+                                        Validators.minLength(10),
+                                        Validators.maxLength(10),
+                                        Validators.pattern('^[0-9]*$')
+                                       ])
       }),
       fromPerson:this.childFormGroup.group({
         state:[''],
@@ -59,6 +69,26 @@ export class CheckOutComponent implements OnInit {
 
     })
   }
+
+  get fullName(){
+    return this.parentFormGroup.get('data.fullName');
+  }
+
+  get email(){
+    return this.parentFormGroup.get('data.email');
+  }
+
+  get phoneNumber(){
+    return this.parentFormGroup.get('data.phoneNumber');
+  }
+
+
+
+
+
+
+
+
 
   similarGroup(event:Event){
      if( (<HTMLInputElement>event.target).checked ){
