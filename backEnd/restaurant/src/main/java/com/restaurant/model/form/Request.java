@@ -59,6 +59,11 @@ public class Request {
     private Address toAddress = new Address();
 
 
+    // set item in request and request in item
+    public void addItem(Item item){
+        items.add(item);            // set item in request(because we are in request class)
+        item.setRequestOrder(this); // set request in item
+    }
 
 
 }

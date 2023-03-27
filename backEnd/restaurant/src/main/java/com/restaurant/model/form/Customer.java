@@ -31,4 +31,11 @@ public class Customer {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
     private Set<Request> requestOrders = new HashSet<>();
 
+
+    // set request in customer and customer in request
+    public void addRequestOrder(Request requestOrder){
+        requestOrders.add(requestOrder);
+        requestOrder.setCustomer(this);
+    }
+
 }
