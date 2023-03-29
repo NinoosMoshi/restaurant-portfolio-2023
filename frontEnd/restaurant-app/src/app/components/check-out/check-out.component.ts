@@ -5,6 +5,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CartService } from 'src/app/services/cart.service';
 import { SpaceValidator } from 'src/app/model/space-validator';
+import { Request } from './../../model/form/request'
+import { Item } from 'src/app/model/form/item';
+import { CartOrder } from 'src/app/model/cart-order';
+import { PurchaseRequest } from 'src/app/model/form/purchase-request';
+import { Router } from '@angular/router';
+import { PurchaseService } from 'src/app/services/purchase.service';
 
 @Component({
   selector: 'app-check-out',
@@ -23,7 +29,9 @@ export class CheckOutComponent implements OnInit {
 
   constructor(private childFormGroup: FormBuilder,
               private stateCityService: StateCityService,
-              private cartService: CartService) { }
+              private cartService: CartService,
+              private purchaseService: PurchaseService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.myForm();
@@ -100,12 +108,7 @@ export class CheckOutComponent implements OnInit {
   }
 
 
-  formSubmit(){
-    console.log(this.parentFormGroup.get("data").value)
-    console.log(this.parentFormGroup.get("fromPerson").value)
-    console.log(this.parentFormGroup.get("toPerson").value)
-    console.log(this.parentFormGroup.get("creditCard").value)
-  }
+
 
 
   getStates(){
@@ -148,6 +151,60 @@ export class CheckOutComponent implements OnInit {
     });
   }
 
+
+
+  formSubmit(){
+    if(this.parentFormGroup.invalid){
+      this.parentFormGroup.markAllAsTouched();
+    }else{
+      let customer = this.parentFormGroup.controls['data'].value;
+
+      let fromAddress = this.parentFormGroup.controls['fromPerson'].value;
+      fromAddress.city = fromAddress.city['cityName'];
+
+      let toAddress = this.parentFormGroup.controls['toPerson'].value;
+      toAddress.city = toAddress.city['cityName'];
+
+      let requestOrder = new Request();
+      requestOrder.totalPrice = this.totalPrice;
+      requestOrder.totalQuantity = this.totalOrder;
+
+      let items: Item[] = [];
+      let orders: CartOrder[] = this.cartService.orders;
+      // for(let i=0; i< orders.length;i++){
+      //   items[i] = new Item(orders[i]);
+      // }
+      items = orders.map(order => new Item(order));
+
+      let purchaseRequest = new PurchaseRequest();
+      purchaseRequest.customer = customer;
+      purchaseRequest.fromAddress = fromAddress;
+      purchaseRequest.toAddress = toAddress;
+      purchaseRequest.requestOrder = requestOrder;
+      purchaseRequest.items = items;
+
+      this.purchaseService.getOrder(purchaseRequest).subscribe({
+        next:response =>{
+          alert("Your name is: "+ response.customerName + "\nYour code is: "+ response.code);
+          this.cleanForm();
+        },
+        error:err =>{
+          // console.log("error is : "+ err.message)
+        }
+      })
+
+    }
+
+  }
+
+
+  cleanForm(){
+    this.cartService.orders = [];
+    this.cartService.totalOrders.next(0);
+    this.cartService.totalPrice.next(0);
+    this.parentFormGroup.reset();
+    this.router.navigateByUrl('/orders')
+  }
 
 
 }
